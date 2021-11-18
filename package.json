@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "watch": "gulp sass:watch"
+    "watch": "gulp sass:watch",
+    "gulp": "gulp sass:compile"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",

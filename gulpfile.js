@@ -13,3 +13,6 @@ async function compile_sass() {
 gulp.task('sass:watch', function () {
     gulp.watch('src/sass/**/*.scss', compile_sass);
 });
+
+gulp.task('sass:compile', compile_sass);
+
