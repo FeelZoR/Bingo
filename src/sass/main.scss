@@ -1,0 +1,21 @@
+$primary-500: #e91e63;
+$primary-600: #d81b60;
+$primary-700: #c2185b;
+
+@import "includes/pico.slim";
+@import "includes/fixed_layout";
+@import "includes/banners";
+@import "includes/game_selector";
+
+.title a {
+    color: inherit;
+
+    &:focus {
+        background: none;
+    }
+}
+
+// Page-specific includes
+@import "index";
+@import "register";
+@import "bingo-game";

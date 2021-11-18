@@ -1,0 +1,26 @@
+USE bingo_db;
+
+CREATE TABLE IF NOT EXISTS Games (
+    name VARCHAR(100) PRIMARY KEY
+);
+
+CREATE TABLE IF NOT EXISTS Users (
+     user_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+     name VARCHAR(20) NOT NULL,
+     password TINYTEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Items (
+    item_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    title TINYTEXT NOT NULL,
+    description TEXT NULL,
+    game VARCHAR(100) REFERENCES Games(name),
+    author INTEGER REFERENCES Users(user_id)
+);
+
+CREATE TABLE IF NOT EXISTS Ratings (
+    rating_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    item INTEGER REFERENCES Items(item_id),
+    author INTEGER REFERENCES Users(user_id),
+    rating TINYINT NOT NULL
+);

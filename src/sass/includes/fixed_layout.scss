@@ -1,0 +1,55 @@
+body > nav {
+    position: fixed;
+    top: 0;
+
+    li a[role=button]{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+// Change background of light/dark switch button
+html[data-theme=dark] {
+    button#dark_mode {
+        $new-button-color: darken(white, 5);
+        background-color: $new-button-color;
+        border-color: $new-button-color;
+    }
+}
+
+html[data-theme=light] {
+    button#dark_mode {
+        $new-button-color: lighten(black, 5);
+        background-color: $new-button-color;
+        border-color: $new-button-color;
+
+        &::after {
+            filter: invert(100%);
+        }
+    }
+}
+
+// Light/dark switch button
+button#dark_mode {
+    position: fixed;
+    bottom: 0;
+    right: var(--spacing);
+    width: auto;
+    border-radius: 2rem;
+    line-height: 1; // we put &nbsp; in the button to have a 1x1 monospaced character
+    font-family: monospace;
+
+    &:focus { // Remove primary color shadow on click, we don't need it for this button
+        box-shadow: none;
+    }
+
+    &::after { // Set icon and center it
+        content: url("/static/brightness-6.svg");
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+

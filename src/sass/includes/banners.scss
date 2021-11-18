@@ -1,0 +1,23 @@
+.success-banner {
+    $base-color: #74bd6f;
+    $darker-color: darken($base-color, 30);
+    background-color: $base-color;
+    border: 1px solid $darker-color;
+    color: $darker-color;
+}
+
+.error-banner {
+    $base-color: #ec5776;
+    $darker-color: darken($base-color, 30);
+    background-color: $base-color;
+    border: 1px solid $darker-color;
+    color: $darker-color;
+}
+
+.success-banner, .error-banner {
+    padding: 1em;
+    border-radius: 0.3em;
+    width: 100%;
+    margin-bottom: var(--spacing);
+    margin-top: var(--spacing);
+}

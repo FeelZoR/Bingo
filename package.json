@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "watch": "gulp sass:watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.43.4",
+    "@picocss/pico": "^1.4.1"
+  }
+}

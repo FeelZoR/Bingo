@@ -1,0 +1,27 @@
+
+// Config
+@import "node_modules/@picocss/pico/scss/variables";
+
+// Theming
+@import "node_modules/@picocss/pico/scss/themes/default";
+
+// Layout
+@import "node_modules/@picocss/pico/scss/layout/document"; // html
+@import "node_modules/@picocss/pico/scss/layout/sectioning"; // body, header, main, footer
+@import "node_modules/@picocss/pico/scss/layout/container"; // .container, .container-fluid
+@import "node_modules/@picocss/pico/scss/layout/section"; // section
+@import "node_modules/@picocss/pico/scss/layout/grid"; // .grid
+
+// Content
+@import "node_modules/@picocss/pico/scss/content/typography"; // a, headings, p, ul, blockquote, ...
+@import "node_modules/@picocss/pico/scss/content/embedded"; // audio, canvas, iframe, img, svg, video
+@import "node_modules/@picocss/pico/scss/content/button"; // button, a[role=button], type=button, type=submit ...
+@import "node_modules/@picocss/pico/scss/content/form"; // input, select, textarea, label, fieldset, legend
+
+// Components
+@import "node_modules/@picocss/pico/scss/components/nav"; // nav
+@import "node_modules/@picocss/pico/scss/components/card"; // article
+
+// Utilities
+@import "node_modules/@picocss/pico/scss/utilities/accessibility"; // -ms-touch-action, aria-*
+@import "node_modules/@picocss/pico/scss/utilities/tooltip"; // data-tooltip

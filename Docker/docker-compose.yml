@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  bingo:
+    ports:
+      - "8080:80"
+    environment:
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PWD}
+      - SECRET_CAPTCHA=${SECRET_CAPTCHA}
+      - CAPTCHA_SITEKEY=${CAPTCHA_SITEKEY}
+      - WEB_DOCUMENT_ROOT=/app/public
+    volumes:
+      - ./../webapp:/app
+    build: .
+
+  db:
+    image: yobasystems/alpine-mariadb:10.5
+    environment:
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PWD}
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PWD}
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d

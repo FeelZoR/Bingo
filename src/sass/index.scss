@@ -1,0 +1,23 @@
+@import "node_modules/@picocss/pico/scss/themes/default/colors";
+
+html[data-theme=dark] {
+    .mode-selection > article:hover {
+        background-color: #{mix($black, $grey-900, 15%)};
+    }
+}
+
+html[data-theme=light] {
+    .mode-selection > article:hover {
+        background-color: darken($white, 8);
+    }
+}
+
+.grid .mode-selection {
+    text-align: center;
+    color: inherit;
+    text-decoration: inherit;
+
+    &:focus {
+        background-color: transparent;
+    }
+}
