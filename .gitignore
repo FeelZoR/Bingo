@@ -1,5 +1,6 @@
 .env
 Docker/data
+Docker/certificates
 webapp/public/static/css
 
 # Created by https://www.toptal.com/developers/gitignore/api/intellij+all

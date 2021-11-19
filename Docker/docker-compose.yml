@@ -3,7 +3,7 @@ version: '3.9'
 services:
   bingo:
     ports:
-      - "8080:80"
+      - "8080:443"
     environment:
       - MYSQL_DATABASE=${DB_NAME}
       - MYSQL_USER=${DB_USER}
@@ -11,8 +11,10 @@ services:
       - SECRET_CAPTCHA=${SECRET_CAPTCHA}
       - CAPTCHA_SITEKEY=${CAPTCHA_SITEKEY}
       - WEB_DOCUMENT_ROOT=/app/public
+      - WEB_ALIAS_DOMAIN=bingo.feelzor.ovh
     volumes:
       - ./../webapp:/app
+      - ./certificates:/opt/docker/etc/nginx/ssl
     build: .
 
   db:
